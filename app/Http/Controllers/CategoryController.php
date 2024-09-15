@@ -16,7 +16,10 @@ class CategoryController extends Controller
     }
 
     public function category_index(){
-        return view('admin.category.category-index');
+        $categories = Category::all();
+        return view('admin.category.category-index',[
+            'categories'=>$categories,
+        ]);
     }
 
     public function category_store(Request $request){
@@ -32,6 +35,7 @@ class CategoryController extends Controller
         Category::insert([
             'cate_name'=>$request->cate_name,
             'cate_img'=>$file_name,
+            'status'=>$request->status,
             'created_at'=>Carbon::now(),
         ]);
         return back();
