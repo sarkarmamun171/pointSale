@@ -37,3 +37,5 @@ Route::get('/customer-info',[CustomerController::class,'customer_index'])->name(
 //Category Information
 Route::get('category/index',[CategoryController::class,'category_index'])->name('category.index');
 Route::post('category/store',[CategoryController::class,'category_store'])->name('category.store');
+Route::get('/category/edit/{id}',[CategoryController::class,'category_edit'])->name('category.edit');
+Route::post('/category/update',[CategoryController::class,'category_update'])->name('category.update');

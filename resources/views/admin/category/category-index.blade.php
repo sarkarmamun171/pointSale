@@ -30,7 +30,7 @@
                                 </td>
                                 <td>
                                     <div class="d-flex">
-                                        <a href="#" class="btn btn-info shadow btn-xs sharp del_btn"><i
+                                        <a href="{{ route('category.edit',$category->id) }}" class="btn btn-info shadow btn-xs sharp del_btn"><i
                                                 class="fa fa-pencil"></i></a>
                                         &nbsp; &nbsp;
                                         <a href="#" class="btn btn-danger shadow btn-xs sharp del_btn"><i
