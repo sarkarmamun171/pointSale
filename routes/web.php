@@ -34,4 +34,6 @@ require __DIR__.'/auth.php';
 
 //Customer Info
 Route::get('/customer-info',[CustomerController::class,'customer_index'])->name('customer.index');
+//Category Information
 Route::get('category/index',[CategoryController::class,'category_index'])->name('category.index');
+Route::post('category/store',[CategoryController::class,'category_store'])->name('category.store');
