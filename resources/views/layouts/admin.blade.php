@@ -1,4 +1,41 @@
- <!--**********************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>POS -Admin Dashboard</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('backend') }}/images/favicon.png">
+	<link rel="stylesheet" href="{{ asset('backend') }}/vendor/chartist/css/chartist.min.css">
+    <link href="{{ asset('backend') }}/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="{{ asset('backend') }}/vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="{{ asset('backend') }}/css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
             Nav header start
         ***********************************-->
         <div class="nav-header">
@@ -725,3 +762,260 @@
         <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="deznav">
+            <div class="deznav-scroll">
+				<ul class="metismenu" id="menu">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-networking"></i>
+							<span class="nav-text">Dashboard</span>
+						</a>
+                        <ul aria-expanded="false">
+							<li><a href="#">Dashboard</a></li>
+						</ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-television"></i>
+							<span class="nav-text">Customer</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('customer.index') }}">Customer Information</a></li>
+                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
+                                <ul aria-expanded="false">
+                                    <li><a href="{{ asset('backend') }}/email-compose.html">Compose</a></li>
+                                    <li><a href="{{ asset('backend') }}/email-inbox.html">Inbox</a></li>
+                                    <li><a href="{{ asset('backend') }}/email-read.html">Read</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{{ asset('backend') }}/app-calender.html">Calendar</a></li>
+							<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Shop</a>
+                                <ul aria-expanded="false">
+                                    <li><a href="{{ asset('backend') }}/ecom-product-grid.html">Product Grid</a></li>
+									<li><a href="{{ asset('backend') }}/ecom-product-list.html">Product List</a></li>
+									<li><a href="{{ asset('backend') }}/ecom-product-detail.html">Product Details</a></li>
+									<li><a href="{{ asset('backend') }}/ecom-product-order.html">Order</a></li>
+									<li><a href="{{ asset('backend') }}/ecom-checkout.html">Checkout</a></li>
+									<li><a href="{{ asset('backend') }}/ecom-invoice.html">Invoice</a></li>
+									<li><a href="{{ asset('backend') }}/ecom-customers.html">Customers</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-controls-3"></i>
+							<span class="nav-text">Category</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('category.index') }}">Add Category</a></li>
+                            <li><a href="{{ asset('backend') }}/chart-morris.html">Morris</a></li>
+                            <li><a href="{{ asset('backend') }}/chart-chartjs.html">Chartjs</a></li>
+                            <li><a href="{{ asset('backend') }}/chart-chartist.html">Chartist</a></li>
+                            <li><a href="{{ asset('backend') }}/chart-sparkline.html">Sparkline</a></li>
+                            <li><a href="{{ asset('backend') }}/chart-peity.html">Peity</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-internet"></i>
+							<span class="nav-text">Bootstrap</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ asset('backend') }}/ui-accordion.html">Accordion</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-alert.html">Alert</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-badge.html">Badge</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-button.html">Button</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-modal.html">Modal</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-button-group.html">Button Group</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-list-group.html">List Group</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-media-object.html">Media Object</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-card.html">Cards</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-carousel.html">Carousel</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-dropdown.html">Dropdown</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-popover.html">Popover</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-progressbar.html">Progressbar</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-tab.html">Tab</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-typography.html">Typography</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-pagination.html">Pagination</a></li>
+                            <li><a href="{{ asset('backend') }}/ui-grid.html">Grid</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-heart"></i>
+							<span class="nav-text">Plugins</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ asset('backend') }}/uc-select2.html">Select 2</a></li>
+                            <li><a href="{{ asset('backend') }}/uc-nestable.html">Nestedable</a></li>
+                            <li><a href="{{ asset('backend') }}/uc-noui-slider.html">Noui Slider</a></li>
+                            <li><a href="{{ asset('backend') }}/uc-sweetalert.html">Sweet Alert</a></li>
+                            <li><a href="{{ asset('backend') }}/uc-toastr.html">Toastr</a></li>
+                            <li><a href="{{ asset('backend') }}/map-jqvmap.html">Jqv Map</a></li>
+                            <li><a href="{{ asset('backend') }}/uc-lightgallery.html">Lightgallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
+							<i class="flaticon-381-settings-2"></i>
+							<span class="nav-text">Widget</span>
+						</a>
+					</li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-notepad"></i>
+							<span class="nav-text">Forms</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ asset('backend') }}/form-element.html">Form Elements</a></li>
+                            <li><a href="{{ asset('backend') }}/form-wizard.html">Wizard</a></li>
+                            <li><a href="{{ asset('backend') }}/form-editor-summernote.html">Summernote</a></li>
+                            <li><a href="form-pickers.html">Pickers</a></li>
+                            <li><a href="form-validation-jquery.html">Jquery Validate</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-network"></i>
+							<span class="nav-text">Table</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
+                            <li><a href="table-datatable-basic.html">Datatable</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-layer-1"></i>
+							<span class="nav-text">Pages</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ asset('backend') }}/page-register.html">Register</a></li>
+                            <li><a href="{{ asset('backend') }}/page-login.html">Login</a></li>
+                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
+                                <ul aria-expanded="false">
+                                    <li><a href="{{ asset('backend') }}/page-error-400.html">Error 400</a></li>
+                                    <li><a href="{{ asset('backend') }}/page-error-403.html">Error 403</a></li>
+                                    <li><a href="{{ asset('backend') }}/page-error-404.html">Error 404</a></li>
+                                    <li><a href="{{ asset('backend') }}/page-error-500.html">Error 500</a></li>
+                                    <li><a href="{{ asset('backend') }}/page-error-503.html">Error 503</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{{ asset('backend') }}/page-lock-screen.html">Lock Screen</a></li>
+                        </ul>
+                    </li>
+                </ul>
+				<div class="add-menu-sidebar">
+					<img src="images/calendar.png" alt="" class="mr-3">
+					<p class="	font-w500 mb-0">Create Workout Plan Now</p>
+				</div>
+				<div class="copyright">
+					<p><strong>Gymove Fitness Admin Dashboard</strong> © 2020 All Rights Reserved</p>
+					<p>Made with <span class="heart"></span> by DexignZone</p>
+				</div>
+			</div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+		<!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <!-- row -->
+            <div class="container-fluid">
+                <div class="row">
+                    @yield('content')
+                </div>
+
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2020</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+        <!--**********************************
+           Support ticket button end
+        ***********************************-->
+
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="{{ asset('backend') }}/vendor/global/global.min.js"></script>
+	<script src="{{ asset('backend') }}/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="{{ asset('backend') }}/vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="{{ asset('backend') }}/js/custom.min.js"></script>
+	<script src="{{ asset('backend') }}/js/deznav-init.js"></script>
+	<script src="{{ asset('backend') }}/vendor/owl-carousel/owl.carousel.js"></script>
+
+	<!-- Chart piety plugin files -->
+    <script src="{{ asset('backend') }}/vendor/peity/jquery.peity.min.js"></script>
+
+	<!-- Apex Chart -->
+	<script src="{{ asset('backend') }}/vendor/apexchart/apexchart.js"></script>
+
+	<!-- Dashboard 1 -->
+	<script src="{{ asset('backend') }}/js/dashboard/dashboard-1.js"></script>
+	<script>
+		function carouselReview(){
+			/*  testimonial one function by = owl.carousel.js */
+			jQuery('.testimonial-one').owlCarousel({
+				loop:true,
+				autoplay:true,
+				margin:30,
+				nav:false,
+				dots: false,
+				left:true,
+				navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+				responsive:{
+					0:{
+						items:1
+					},
+					484:{
+						items:2
+					},
+					882:{
+						items:3
+					},
+					1200:{
+						items:2
+					},
+
+					1540:{
+						items:3
+					},
+					1740:{
+						items:4
+					}
+				}
+			})
+		}
+		jQuery(window).on('load',function(){
+			setTimeout(function(){
+				carouselReview();
+			}, 1000);
+		});
+	</script>
+</body>
+</html>
