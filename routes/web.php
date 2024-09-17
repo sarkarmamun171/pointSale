@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProfileController;
@@ -38,4 +39,9 @@ Route::get('/customer-info',[CustomerController::class,'customer_index'])->name(
 Route::get('category/index',[CategoryController::class,'category_index'])->name('category.index');
 Route::post('category/store',[CategoryController::class,'category_store'])->name('category.store');
 Route::get('/category/edit/{id}',[CategoryController::class,'category_edit'])->name('category.edit');
-Route::post('/category/update',[CategoryController::class,'category_update'])->name('category.update');
+Route::post('/category/update/{id}',[CategoryController::class,'category_update'])->name('category.update');
+Route::get('/category/delte/{id}',[CategoryController::class,'category_delete'])->name('category.delete');
+
+//Brand Info
+Route::get('/brand/index',[BrandController::class,'brand_index'])->name('brand.index');
+Route::post('/brand/store',[BrandController::class,'brand_store'])->name('brand.store');

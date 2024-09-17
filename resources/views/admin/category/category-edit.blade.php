@@ -7,7 +7,7 @@
         </div>
         <div class="card-body">
 
-            <form action="{{ route('category.update') }}" method="POST" enctype="multipart/form-data" >
+            <form action="{{ route('category.update',$category_info->id) }}" method="POST" enctype="multipart/form-data" >
                 @csrf
                 <div class="mb-3">
                     <input type="hidden" name="category_id" value="{{ $category_info->id }}">

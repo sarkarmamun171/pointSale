@@ -811,36 +811,14 @@
 						</a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route('category.index') }}">Add Category</a></li>
-                            <li><a href="{{ asset('backend') }}/chart-morris.html">Morris</a></li>
-                            <li><a href="{{ asset('backend') }}/chart-chartjs.html">Chartjs</a></li>
-                            <li><a href="{{ asset('backend') }}/chart-chartist.html">Chartist</a></li>
-                            <li><a href="{{ asset('backend') }}/chart-sparkline.html">Sparkline</a></li>
-                            <li><a href="{{ asset('backend') }}/chart-peity.html">Peity</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-internet"></i>
-							<span class="nav-text">Bootstrap</span>
+							<span class="nav-text">Brand</span>
 						</a>
-                        <ul aria-expanded="false">
-                            <li><a href="{{ asset('backend') }}/ui-accordion.html">Accordion</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-alert.html">Alert</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-badge.html">Badge</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-button.html">Button</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-modal.html">Modal</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-button-group.html">Button Group</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-list-group.html">List Group</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-media-object.html">Media Object</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-card.html">Cards</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-carousel.html">Carousel</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-dropdown.html">Dropdown</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-popover.html">Popover</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-progressbar.html">Progressbar</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-tab.html">Tab</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-typography.html">Typography</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-pagination.html">Pagination</a></li>
-                            <li><a href="{{ asset('backend') }}/ui-grid.html">Grid</a></li>
-
+                        <ul aria-expanded="Brand">
+                            <li><a href="{{ route('brand.index') }}">Add Brand</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">

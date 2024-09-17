@@ -50,16 +50,16 @@ class CategoryController extends Controller
             'category_info' => $category_info,
         ]);
     }
-    public function category_update(Request $request)
+    public function category_update(Request $request,$id)
     {
-        $category = Category::find($request->id);
+        $category = Category::find($request->$id);
         if ($request->cate_img == ' ') {
             Category::find($request->id)->update([
                 'cate_name' => $request->cate_name,
                 'status' => $request->status,
             ]);
         } else {
-            $current_img = public_path('uploads/category/' . $category->cate_img);
+            $current_img = public_path('uploads/category/' .$category->cate_img);
             unlink($current_img);
 
             $img = $request->cate_img;
@@ -73,4 +73,8 @@ class CategoryController extends Controller
             ]);
         }
     }
+    public function category_delete($id){
+        Category::find($id)->delete();
+        return back();
+     }
 }
