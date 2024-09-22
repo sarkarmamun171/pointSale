@@ -26,9 +26,9 @@
                     <div class="mb-3">
                         <label for="">Select</label>
                         <select class="form-control" name="status" value="{{ $brand_info->status }}">
-                            <option selected>Status Menu</option>
-                            <option value="1">True</option>
-                            <option value="2">False</option>
+                            <option>Status Menu</option>
+                            <option value="1" {{ $brand_info->status==1 ?'selected':'' }}>True</option>
+                            <option value="2" {{ $brand_info->status==2 ?'selected':'' }}>False</option>
                         </select>
                     </div>
                     <div class="mb-3">

@@ -48,6 +48,7 @@ class BrandController extends Controller
         if($request->brand_img == ''){
             Brand::find($request->brand_id)->update([
                 'brand_name'=>$request->brand_name,
+                'status'=>$request->status,
                 'updated_at'=>Carbon::now(),
             ]);
             return back()->with('success','Brand updated Successfully!');
@@ -63,6 +64,7 @@ class BrandController extends Controller
             Brand::find($request->brand_id)->update([
                 'brand_name'=>$request->brand_name,
                 'brand_img'=>$file_name,
+                'status'=>$request->status,
                 'updated_at'=>Carbon::now(),
             ]);
             return back()->with('success','Brand updated Successfully!');

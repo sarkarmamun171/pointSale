@@ -3,6 +3,7 @@
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -48,3 +49,6 @@ Route::post('/brand/store',[BrandController::class,'brand_store'])->name('brand.
 Route::get('/brand/edit/{brand_id}',[BrandController::class,'brand_edit'])->name('brand.edit');
 Route::post('/brand/update',[BrandController::class,'brand_update'])->name('brand.update');
 Route::get('/brand/update/{id}',[BrandController::class,'brand_delete'])->name('brand.delete');
+
+//Product Information
+Route::get('/add-product',[ProductController::class,'product_index'])->name('product.index');

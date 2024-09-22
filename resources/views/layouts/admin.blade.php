@@ -823,16 +823,11 @@
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-heart"></i>
-							<span class="nav-text">Plugins</span>
+							<span class="nav-text">Product</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ asset('backend') }}/uc-select2.html">Select 2</a></li>
-                            <li><a href="{{ asset('backend') }}/uc-nestable.html">Nestedable</a></li>
-                            <li><a href="{{ asset('backend') }}/uc-noui-slider.html">Noui Slider</a></li>
-                            <li><a href="{{ asset('backend') }}/uc-sweetalert.html">Sweet Alert</a></li>
-                            <li><a href="{{ asset('backend') }}/uc-toastr.html">Toastr</a></li>
-                            <li><a href="{{ asset('backend') }}/map-jqvmap.html">Jqv Map</a></li>
-                            <li><a href="{{ asset('backend') }}/uc-lightgallery.html">Lightgallery</a></li>
+                            <li><a href="{{ route('product.index') }}">Add Product</a></li>
+
                         </ul>
                     </li>
                     <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
