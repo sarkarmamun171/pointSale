@@ -9,4 +9,8 @@ class Category extends Model
 {
     use HasFactory;
     protected $fillable = ['catenamr','status'];
+
+    public function rel_to_product(){
+        return $this->belongsTo(Product::class,'cat_id');
+    }
 }

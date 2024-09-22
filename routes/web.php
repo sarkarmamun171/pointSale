@@ -52,3 +52,4 @@ Route::get('/brand/update/{id}',[BrandController::class,'brand_delete'])->name('
 
 //Product Information
 Route::get('/add-product',[ProductController::class,'product_index'])->name('product.index');
+Route::get('/store-product',[ProductController::class,'product_store'])->name('product.store');

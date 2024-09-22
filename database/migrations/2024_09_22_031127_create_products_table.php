@@ -17,8 +17,15 @@ return new class extends Migration
             $table->unsignedBigInteger('cat_id');
             $table->unsignedBigInteger('brand_id');
             $table->double('price');
-            $table->foreign('cat_id')->references('id')->on('categories')->onDelete('casecade');
-            $table->foreign('brand_id')->references('id')->on('brands')->onDelete('casecade');
+            $table->integer('discount')->nullable();
+            $table->integer('after_discount')->nullable();
+            $table->string('short-desp')->nullable();
+            $table->string('long-desp')->nullable();
+            $table->string('additional_info')->nullable();
+            $table->string('preview');
+            $table->string('slug');
+            // $table->foreign('cat_id')->references('id')->on('categories')->onDelete('casecade');
+            // $table->foreign('brand_id')->references('id')->on('brands')->onDelete('casecade');
             $table->timestamps();
         });
     }
