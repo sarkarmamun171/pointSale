@@ -11,6 +11,6 @@ class Category extends Model
     protected $fillable = ['catenamr','status'];
 
     public function rel_to_product(){
-        return $this->belongsTo(Product::class,'cat_id');
+        return $this->hasMany(Product::class,'cat_id');
     }
 }

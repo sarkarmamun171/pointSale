@@ -8,6 +8,20 @@
             <div class="card-body">
                 <form action="" method="post">
                     <div class="row">
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="" class="form-label">Category</label>
+                                <select name="category" id="category" class="form-control">
+                                    <option value="">Seclect Category</option>
+                                    @foreach ($$categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                    @endforeach
+                                </select>
+                                @error('category')
+                                    <strong class="text-danger">{{$message}}</strong>
+                                @enderror
+                            </div>
+                        </div>
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label for="" class="form-label">Product Name</label>

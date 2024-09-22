@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,10 @@ class ProductController extends Controller
       $this->product = new Product();
     }
     public function product_index(){
-        return view('admin.product.product-index');
+        $categories = Category::all();
+        return view('admin.product.product-index',[
+            'categories'=>$categories,
+        ]);
     }
     public function product_store(Request $request){
         $request->validate([
@@ -24,7 +28,7 @@ class ProductController extends Controller
             'additional_info'=>'required',
             'preview'=>'required',
             'price'=>'required',
-            
+
         ]);
     }
 }
