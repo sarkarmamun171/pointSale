@@ -6,20 +6,29 @@
                 <h3>Add Product</h3>
             </div>
             <div class="card-body">
-                <form action="" method="post">
+                <form action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
+                    @csrf
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="mb-3">
                                 <label for="" class="form-label">Category</label>
                                 <select name="category" id="category" class="form-control">
                                     <option value="">Seclect Category</option>
-                                    @foreach ($$categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                    @foreach ($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->cate_name }}</option>
                                     @endforeach
                                 </select>
-                                @error('category')
-                                    <strong class="text-danger">{{$message}}</strong>
-                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label for="" class="form-label">Brand</label>
+                                <select name="brand" id="brand" class="form-control">
+                                    <option value="">Seclect Brand</option>
+                                    @foreach ($brands as $brand)
+                                    <option value="{{ $brand->id }}">{{ $brand->brand_name }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -70,22 +79,7 @@
                                 <img width="100" src="" id="blah" alt="">
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                {{-- <label for="" class="form-label">Gallery Image</label>
-                                <input type="file" class="form-control" name="preview[]"></input> --}}
-                                <div class="upload__box">
-                                    <span >Gallery Images</span>
-                                    <div class="upload__btn-box">
-                                    <label class="upload__btn">
-                                        <p class="m-0">Upload images</p>
-                                        <input name="gallery[]" type="file" multiple="" data-max_length="20" class="upload__inputfile">
-                                    </label>
-                                    </div>
-                                    <div class="upload__img-wrap"></div>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="col-lg-4 m-auto">
                             <div class="mb-3">
                                 <button type="submit" class="btn-primary p-3 rounded">Add New Product</button>
