@@ -38,7 +38,7 @@
                                     &nbsp; &nbsp;
                                     <a title="delete" href="#" class="btn btn-danger shadow btn-xs sharp del_btn"><i class="fa fa-trash"></i></a>
                                     &nbsp; &nbsp;
-                                    <a title="edit" href="#" class="btn btn-info shadow btn-xs sharp"><i class="fa fa-pencil"></i></a>
+                                    <a title="edit" href="{{ route('product.edit',$productList->id) }}" class="btn btn-info shadow btn-xs sharp"><i class="fa fa-pencil"></i></a>
                                 </div>
                             </td>
                         </tr>

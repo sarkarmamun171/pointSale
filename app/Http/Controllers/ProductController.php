@@ -60,4 +60,14 @@ class ProductController extends Controller
             'productLists'=>$productLists,
         ]);
     }
+    public function product_edit($id){
+        $categories = Category::all();
+        $brands = Brand::all();
+        $products = Product::find($id);
+        return view('admin.product.product-edit',[
+            'categories'=>$categories,
+            'brands'=>$brands,
+            'products'=>$products,
+        ]);
+    }
 }
