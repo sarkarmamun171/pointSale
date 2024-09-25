@@ -831,10 +831,13 @@
 
                         </ul>
                     </li>
-                    <li><a href="widget-basic.html" class="ai-icon" aria-expanded="false">
+                    <li><a href="widget-basic.html" class="has-arrow ai-icon" aria-expanded="false">
 							<i class="flaticon-381-settings-2"></i>
-							<span class="nav-text">Widget</span>
+							<span class="nav-text">Sales of Product</span>
 						</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('sale.index') }}">Sales Details</a></li>
+                        </ul>
 					</li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-notepad"></i>
@@ -912,7 +915,7 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2020</p>
+                <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2024</p>
             </div>
         </div>
         <!--**********************************
@@ -952,6 +955,7 @@
 
 	<!-- Dashboard 1 -->
 	<script src="{{ asset('backend') }}/js/dashboard/dashboard-1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 	<script>
 		function carouselReview(){
 			/*  testimonial one function by = owl.carousel.js */
@@ -993,5 +997,6 @@
 		});
 	</script>
     @include('libararies.script')
+    @yield('footer_script')
 </body>
 </html>

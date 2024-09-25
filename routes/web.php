@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SalesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,3 +56,6 @@ Route::get('/add-product',[ProductController::class,'product_index'])->name('pro
 Route::post('/store-product',[ProductController::class,'product_store'])->name('product.store');
 Route::get('/product-list',[ProductController::class,'product_list'])->name('product.list');
 Route::get('/product-edit/{id}',[ProductController::class,'product_edit'])->name('product.edit');
+
+//Sales
+ Route::get('/sales',[SalesController::class,'sales_index'])->name('sale.index');
